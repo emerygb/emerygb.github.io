@@ -136,3 +136,38 @@ p { font-size:14px; line-height:1.75; }
     .work-banner img { max-height:360px; }
     .about-banner img { max-height:280px; }
 }
+
+/* WORK DESKTOP FEATURE UPDATE: position the poster at left, and keywords plus stacked pink cards at right. */
+.work-hero {
+    display:grid;
+    grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+    align-items:center;
+    gap:32px;
+    width:calc(100% - 48px);
+    max-width:830px;
+    margin:0 auto;
+}
+.work-hero .work-banner { width:100%; max-width:none; margin:0; }
+.work-hero .work-banner img { max-height:460px; margin:auto; }
+.work-hero-side { min-width:0; display:flex; flex-direction:column; justify-content:center; gap:16px; }
+/* WORK DESKTOP FEATURE UPDATE: enlarge research keywords and keep their dot separators blue. */
+.work-hero-side .work-keywords { display:block; padding:0; font-size:21px; line-height:1.5; }
+.work-hero-side .work-keywords span { display:inline; }
+.work-hero-side .work-keyword-dot { margin:0 9px; font-size:23px; }
+/* WORK DESKTOP FEATURE UPDATE: stack the three existing pink link cards vertically without changing their links. */
+.work-hero-side .work-links--three { grid-template-columns:minmax(0,1fr); gap:10px; padding:0; width:100%; max-width:none; }
+.work-hero-side .work-link-area { min-height:0; }
+.work-hero-side .work-link-card { width:100%; min-height:109px; padding:11px 20px; }
+.work-hero-side .work-link-card h3 { margin-bottom:10px; font-size:18px; }
+/* WORK DESKTOP FEATURE UPDATE: keep the existing photo-above-keywords and three-across buttons layout on phones/tablets. */
+@media (max-width:720px) {
+    .work-hero { display:flex; flex-direction:column; gap:0; width:calc(100% - 32px); }
+    .work-hero .work-banner { justify-content:center; }
+    .work-hero-side { width:100%; max-width:600px; gap:0; }
+    .work-hero-side .work-keywords { padding:22px 0 3px; font-size:17px; }
+    .work-hero-side .work-keyword-dot { margin:0 5px; font-size:19px; }
+    .work-hero-side .work-links--three { grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; padding:13px 0 0; }
+    .work-hero-side .work-link-card { min-height:133px; padding:9px 5px; }
+    .work-hero-side .work-link-card h3 { font-size:13px; margin-bottom:12px; }
+    .work-hero-side .work-link-card .button { min-width:0; width:100%; padding:8px 4px; font-size:11px; }
+}
