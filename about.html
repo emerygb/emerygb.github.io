@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Emery Grahill-Bland — PhD researcher in exoplanets at UCL Mullard Space Science Laboratory.">
     <title>About | Emery Grahill-Bland</title>
-    <link rel="icon" type="image/svg+xml" href="assets/saturn.svg">
+    <!-- Fixed: use the existing PNG icon, rather than a missing SVG. -->
+    <link rel="icon" type="image/png" href="assets/saturn.png">
     <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 <!-- Shared header: centered outline planet, name, and four simple links as on the Wix site. -->
 <header class="site-header">
-    <img class="site-mark" src="assets/saturn.svg" alt="Ringed planet symbol">
+    <!-- Fixed: use the planet image that is actually in assets/. -->
+    <img class="site-mark" src="assets/saturn.png" alt="Ringed planet symbol">
     <a class="site-name" href="index.html">EMERY GRAHILL-BLAND</a>
     <nav class="site-nav" aria-label="Main navigation">
         <a href="index.html">Home</a>
@@ -21,8 +23,8 @@
     </nav>
 </header>
 <main>
-<!-- Photo placeholder: use your own banner photograph when ready. -->
-<div class="page-banner photo-slot" aria-label="Space for an about page banner photograph"><span class="photo-note">About photo to add</span></div>
+<!-- Fixed: render the supplied About photograph with the requested alt text. -->
+<div class="page-banner photo-slot"><img src="assets/about.jpg" alt="my friends in London"></div>
 <section class="section about-intro">
     <h2>About Me</h2>
     <p>I'm an exoplanet PhD researcher, but science isn't the only thing that keeps me busy. Outside research, I enjoy running, playing ultimate frisbee, spending time with horses, writing and reading.</p>
@@ -30,12 +32,12 @@
 <section class="section" style="padding-top:8px">
     <h2 class="section-title">Non-Science Pursuits</h2>
     <div class="hobby-list">
-        <!-- Each interest has an intentionally empty image slot; add your own photos later. -->
-        <article class="hobby"><div class="hobby-photo photo-slot" aria-label="Space for a running photograph"><span class="photo-note">Running photo</span></div><div class="hobby-copy"><h3>Running</h3><p>Running has become one of my favourite ways to challenge myself, spend time outdoors, and see how far I've come. I've enjoyed training for longer-distance races and keeping up the habit alongside my research.</p></div></article>
-        <article class="hobby"><div class="hobby-photo photo-slot" aria-label="Space for a frisbee photograph"><span class="photo-note">Frisbee photo</span></div><div class="hobby-copy"><h3>Frisbee</h3><p>I started playing ultimate frisbee at UCLA, and it's continued to be a wonderful way to meet people, build a community, and stay active, especially when I've moved to new cities.</p></div></article>
-        <!-- These new sections are blank drafts: replace the prompt text with your own words. -->
-        <article class="hobby"><div class="hobby-photo photo-slot" aria-label="Space for a horses photograph"><span class="photo-note">Horses photo</span></div><div class="hobby-copy"><h3>Horses</h3><p class="draft-note">I grew up riding horses, and competed when I was in school. Though I don't ride regularly now, I stil love to spend time with horses and all animals when I have the chance. </p></div></article>
-        <article class="hobby"><div class="hobby-photo photo-slot" aria-label="Space for a writing photograph"><span class="photo-note">Writing photo</span></div><div class="hobby-copy"><h3>Literature</h3><p class="draft-note"> I love reading, and have started a book club among my friends. I also like to write short fiction when I have the time.</p></div></article>
+        <!-- Fixed: each hobby now displays its supplied photo; alt text preserves the original descriptions. -->
+        <article class="hobby"><div class="hobby-photo photo-slot"><img src="assets/running.jpg" alt="after finishing the Royal Parks Half Marathon"></div><div class="hobby-copy"><h3>Running</h3><p>Running has become one of my favourite ways to challenge myself, spend time outdoors, and see how far I've come. I've enjoyed training for longer-distance races and keeping up the habit alongside my research.</p></div></article>
+        <article class="hobby"><div class="hobby-photo photo-slot"><img src="assets/frisbee.jpg" alt="my london ultimate frisbee team"></div><div class="hobby-copy"><h3>Frisbee</h3><p>I started playing ultimate frisbee at UCLA, and it's continued to be a wonderful way to meet people, build a community, and stay active, especially when I've moved to new cities.</p></div></article>
+        <!-- Fixed: Horses and Literature use the same standard paragraph styling as the other hobbies. -->
+        <article class="hobby"><div class="hobby-photo photo-slot"><img src="assets/horses.jpg" alt="me and my horse Chesterlander"></div><div class="hobby-copy"><h3>Horses</h3><p>I grew up riding horses, and competed when I was in school. Though I don't ride regularly now, I stil love to spend time with horses and all animals when I have the chance. </p></div></article>
+        <article class="hobby"><div class="hobby-photo photo-slot"><img src="assets/writing.jpg" alt="a photo from my book club"></div><div class="hobby-copy"><h3>Literature</h3><p> I love reading, and have started a book club among my friends. I also like to write short fiction when I have the time.</p></div></article>
     </div>
 </section>
 </main>
