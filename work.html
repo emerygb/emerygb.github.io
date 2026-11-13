@@ -23,19 +23,38 @@
     </nav>
 </header>
 <main>
-<!-- Work banner uses the converted, browser-compatible assets/work.jpg. -->
-<div class="page-banner photo-slot" aria-label="Space for a work page banner photograph">
-    <!-- The photo file is already included in the repository. -->
+<!-- WORK UPDATE: display the complete portrait photo at its natural aspect ratio, rather than cropping it to a narrow banner. -->
+<figure class="work-banner">
     <img src="assets/work.jpg" alt="my poster at Exoplanets 6 in Porto, 2026">
-</div>
-<section class="work-links" aria-label="Professional links">
-    <div class="work-link-area"><div class="work-link-card"><h3>LinkedIn</h3><!-- Fixed: the LinkedIn button uses an absolute HTTPS URL with no stray draft text. --><a class="button" href="https://www.linkedin.com/in/emery-grahill-bland">Visit</a></div></div>
-    <div class="work-link-area"><div class="work-link-card"><h3>Curriculum<br>Vitae</h3><!-- The CV button opens the existing assets/CV.pdf in a new tab. -->
-<!-- Fixed: GitHub Pages filenames are case-sensitive; file is named CV.pdf. -->
-<a class="button" href="assets/CV.pdf" target="_blank" rel="noopener">
-    Download
-</a></div></div>
+</figure>
+<!-- WORK UPDATE: three professional links (UCL, ORCID and CV), with no LinkedIn button. -->
+<section class="work-links work-links--three" aria-label="Professional links">
+    <div class="work-link-area"><div class="work-link-card"><h3>UCL Profile</h3>
+        <!-- WORK UPDATE: link to the supplied UCL researcher profile. -->
+        <a class="button" href="https://profiles.ucl.ac.uk/105234-ms-emery-grahillbland-grahillbland" target="_blank" rel="noopener">Visit</a>
+    </div></div>
+    <div class="work-link-area"><div class="work-link-card"><h3>ORCID</h3>
+        <!-- WORK UPDATE: link to the supplied ORCID researcher identifier. -->
+        <a class="button" href="https://orcid.org/0009-0005-2971-5063" target="_blank" rel="noopener">Visit</a>
+    </div></div>
+    <div class="work-link-area"><div class="work-link-card"><h3>Curriculum<br>Vitae</h3>
+        <!-- Retain the existing case-sensitive CV filename and working PDF link. -->
+        <a class="button" href="assets/CV.pdf" target="_blank" rel="noopener">Download</a>
+    </div></div>
 </section>
+<!-- WORK UPDATE: Research now comes first; copy uses first person and current work uses the present tense. -->
+<section class="section">
+    <h2 class="section-title">Research</h2>
+    <div class="work-detail"><h3>TESS exoplanet transit fitting</h3><p>I am developing an automated approach to downloading, detrending and fitting TESS transit light curves, with an emphasis on planets around M-dwarf stars. I use Python, transit models and Bayesian MCMC methods.</p></div>
+    <div class="work-detail"><h3>ExoMol MSc project</h3><p>For my MSc dissertation, I worked on a high-temperature molecular line list for NO⁺, contributing to research on molecular spectroscopy in planetary atmospheres.</p></div>
+</section>
+<!-- WORK UPDATE: Teaching and outreach now follows research; Orbyts wording updated verbatim. -->
+<section class="section" style="padding-top:0">
+    <h2 class="section-title">Teaching &amp; Outreach</h2>
+    <div class="work-detail"><h3>Orbyts</h3><p>I support school students in astronomy research through the award-winning Orbyts programme. I also lead the MSSL Hub for Orbyts.</p></div>
+    <div class="work-detail"><h3>Science education</h3><p>I have taught science and mathematics at secondary-school level and science communication at university level.</p></div>
+</section>
+<!-- WORK UPDATE: Education has been moved to the end of the Work page. -->
 <section class="section">
     <h2 class="section-title">Education</h2>
     <div class="education">
@@ -43,17 +62,6 @@
         <article class="edu-item"><h3>2023–2024</h3><p class="sub">MSc · UCL</p><p>Planetary Science<br>Distinction</p></article>
         <article class="edu-item"><h3>2018–2022</h3><p class="sub">BSc · UCLA</p><p>Astrobiology and Science Communication<br>Honors</p></article>
     </div>
-</section>
-<section class="section" style="padding-top:10px">
-    <h2 class="section-title">Research</h2>
-    <div class="work-detail"><h3>TESS exoplanet transit fitting</h3><p>Building a consistent, automated approach to downloading, detrending and fitting TESS transit light curves, with an emphasis on planets around M-dwarf stars. The pipeline uses Python, transit models and Bayesian MCMC methods.</p></div>
-    <div class="work-detail"><h3>Light-curve methods</h3><p>Comparing detrending approaches, investigating contamination and aperture choices, and testing methods using synthetic planet transits.</p></div>
-    <div class="work-detail"><h3>ExoMol MSc project</h3><p>My MSc dissertation focused on a high-temperature molecular line list for NO⁺, contributing to research on molecular spectroscopy in planetary atmospheres.</p></div>
-</section>
-<section class="section" style="padding-top:0">
-    <h2 class="section-title">Teaching &amp; Outreach</h2>
-    <div class="work-detail"><h3>Orbyts</h3><p>Supporting school students in astronomy research through the Orbyts programme.</p></div>
-    <div class="work-detail"><h3>Science education</h3><p>Experience teaching science and mathematics, including secondary education and university-level science communication.</p></div>
 </section>
 </main>
 <footer class="site-footer">Emery Grahill-Bland · <a href="https://github.com/emerygb">GitHub</a></footer>

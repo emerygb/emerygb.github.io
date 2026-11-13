@@ -95,3 +95,12 @@ p { font-size:14px; line-height:1.75; }
     .interest-copy { max-width:100%; }
     .interest-copy h3 { font-size:22px; margin-bottom:12px; }
 }
+
+/* WORK UPDATE: show the complete portrait-oriented poster photo without cropping; limit its display height. */
+.work-banner { width:calc(100% - 72px); max-width:980px; margin:0 auto; display:flex; justify-content:center; }
+.work-banner img { display:block; width:auto; max-width:100%; height:auto; max-height:720px; object-fit:contain; }
+/* WORK UPDATE: UCL Profile, ORCID and CV cards share one row on desktop. */
+.work-links--three { grid-template-columns:repeat(3,minmax(0,1fr)); }
+/* WORK UPDATE: keep the complete photo visible and stack link cards on narrow screens. */
+@media (max-width:800px) { .work-banner { width:calc(100% - 32px); } }
+@media (max-width:600px) { .work-links--three { grid-template-columns:1fr; } }
