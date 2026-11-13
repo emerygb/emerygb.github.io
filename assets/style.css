@@ -232,3 +232,31 @@ p { font-size:14px; line-height:1.75; }
     margin-top:9px;
     background:var(--pink);
 }
+
+/* HOME KEYWORDS UPDATE: span both existing pink buttons, with larger centred blue text and blue separators. */
+.quick-links { row-gap:18px; }
+.quick-links .home-keywords {
+    flex:0 0 100%;
+    width:100%;
+    padding:0;
+    font-size:clamp(15px,2vw,21px);
+    line-height:1.5;
+    gap:6px 12px;
+}
+
+/* ABOUT DESKTOP LAYOUT UPDATE: put the complete group photo left and intro right; leave mobile unaltered. */
+@media (min-width:801px) {
+    .about-hero {
+        display:grid;
+        grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+        align-items:center;
+        gap:50px;
+        width:calc(100% - 80px);
+        max-width:1000px;
+        margin:24px auto 0;
+    }
+    .about-hero .about-banner { width:100%; max-width:none; margin:0; }
+    .about-hero .about-banner img { margin:0; }
+    .about-hero .about-intro { max-width:none; margin:0; padding:0; text-align:left; }
+    .about-hero .about-intro h2::after { margin-left:0; }
+}
