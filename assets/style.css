@@ -197,3 +197,34 @@ p { font-size:14px; line-height:1.75; }
 .contact-links .button { background:var(--pink); }
 /* Preserve the existing blue hover contrast on the newly pink contact buttons. */
 .contact-links .button:hover { background:var(--blue); color:#fff; }
+
+/* HOME PINK DETAIL: add one short pale-pink underline to the introductory heading. */
+.home-hero-copy h1::after {
+    content:"";
+    display:block;
+    width:54px;
+    height:5px;
+    margin:18px auto 0;
+    background:var(--pink);
+}
+
+/* WORK PINK DETAILS: match the short heading underlines used on the About page. */
+.work-hero ~ .section .section-title::after {
+    content:"";
+    display:block;
+    width:54px;
+    height:5px;
+    margin:16px auto 0;
+    background:var(--pink);
+}
+
+/* WORK PINK DETAILS: add understated pink lines to research and outreach items. */
+.work-hero ~ .section .work-detail { border-top-color:#f0c7ca; }
+.work-hero ~ .section .work-detail h3::after {
+    content:"";
+    display:block;
+    width:34px;
+    height:4px;
+    margin-top:9px;
+    background:var(--pink);
+}
