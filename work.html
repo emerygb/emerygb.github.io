@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Emery Grahill-Bland — PhD researcher in exoplanets at UCL Mullard Space Science Laboratory.">
     <title>Work | Emery Grahill-Bland</title>
-    <link rel="icon" type="image/svg+xml" href="assets/saturn.svg">
+    <!-- Fixed: use the existing PNG icon, rather than a missing SVG. -->
+    <link rel="icon" type="image/png" href="assets/saturn.png">
     <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 <!-- Shared header: centered outline planet, name, and four simple links as on the Wix site. -->
 <header class="site-header">
-    <img class="site-mark" src="assets/saturn.svg" alt="Ringed planet symbol">
+    <!-- Fixed: use the planet image that is actually in assets/. -->
+    <img class="site-mark" src="assets/saturn.png" alt="Ringed planet symbol">
     <a class="site-name" href="index.html">EMERY GRAHILL-BLAND</a>
     <nav class="site-nav" aria-label="Main navigation">
         <a href="index.html">Home</a>
@@ -21,15 +23,16 @@
     </nav>
 </header>
 <main>
-<!-- Photo placeholder: place an img inside this banner when you have your chosen photograph. -->
+<!-- Work banner uses the converted, browser-compatible assets/work.jpg. -->
 <div class="page-banner photo-slot" aria-label="Space for a work page banner photograph">
-    <!-- Photo reference: add assets/work.jpg to display this user-provided photograph. -->
+    <!-- The photo file is already included in the repository. -->
     <img src="assets/work.jpg" alt="my poster at Exoplanets 6 in Porto, 2026">
 </div>
 <section class="work-links" aria-label="Professional links">
-    <div class="work-link-area"><div class="work-link-card"><h3>LinkedIn</h3><!-- Add the correct LinkedIn URL before enabling this link. --><a class="button" href="www.linkedin.com/in/emery-grahill-bland">Visit</a>Link to add</span></div></div>
-    <div class="work-link-area"><div class="work-link-card"><h3>Curriculum<br>Vitae</h3><!-- Add your CV PDF as assets/cv.pdf before enabling this link. --><!-- Open the CV PDF in a new tab. -->
-<a class="button" href="assets/cv.pdf" target="_blank" rel="noopener">
+    <div class="work-link-area"><div class="work-link-card"><h3>LinkedIn</h3><!-- Fixed: the LinkedIn button uses an absolute HTTPS URL with no stray draft text. --><a class="button" href="https://www.linkedin.com/in/emery-grahill-bland">Visit</a></div></div>
+    <div class="work-link-area"><div class="work-link-card"><h3>Curriculum<br>Vitae</h3><!-- The CV button opens the existing assets/CV.pdf in a new tab. -->
+<!-- Fixed: GitHub Pages filenames are case-sensitive; file is named CV.pdf. -->
+<a class="button" href="assets/CV.pdf" target="_blank" rel="noopener">
     Download
 </a></div></div>
 </section>

@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Emery Grahill-Bland — PhD researcher in exoplanets at UCL Mullard Space Science Laboratory.">
     <title>Home | Emery Grahill-Bland</title>
-    <link rel="icon" type="image/svg+xml" href="assets/saturn.svg">
+    <!-- Fixed: use the existing PNG icon, rather than a missing SVG. -->
+    <link rel="icon" type="image/png" href="assets/saturn.png">
     <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 <!-- Shared header: centered outline planet, name, and four simple links as on the Wix site. -->
 <header class="site-header">
-    <img class="site-mark" src="assets/saturn.svg" alt="Ringed planet symbol">
+    <!-- Fixed: use the planet image that is actually in assets/. -->
+    <img class="site-mark" src="assets/saturn.png" alt="Ringed planet symbol">
     <a class="site-name" href="index.html">EMERY GRAHILL-BLAND</a>
     <nav class="site-nav" aria-label="Main navigation">
         <a href="index.html" aria-current="page">Home</a>
@@ -21,10 +23,10 @@
     </nav>
 </header>
 <main>
-<!-- Photo placeholder: replace the span below with an image whenever you are ready. -->
+<!-- Home hero photograph is loaded from assets/home.jpg. -->
 <section class="home-hero" aria-label="Introduction">
     <div class="home-hero-image photo-slot" aria-label="Space for a homepage photograph">
-    <!-- Photo reference: add assets/home.jpg to display this user-provided photograph. -->
+    <!-- This photo is already included in the repository. -->
     <img src="assets/home.jpg" alt="my master's graduation photo">
 </div>
     <div class="home-hero-copy">
@@ -35,9 +37,9 @@
 </section>
 <!-- Recreates the three outlined shortcuts from the original Home page. -->
 <div class="quick-links">
-    <!-- Add your CV PDF as assets/cv.pdf before making this button clickable. -->
-    <!-- Link to the CV PDF in the assets folder. -->
-<a class="button" href="assets/cv.pdf" target="_blank" rel="noopener">
+    <!-- The CV button links to the existing assets/CV.pdf file. -->
+<!-- Fixed: GitHub Pages filenames are case-sensitive; file is named CV.pdf. -->
+<a class="button" href="assets/CV.pdf" target="_blank" rel="noopener">
     Curriculum Vitae
 </a>
     <a class="button" href="about.html">Bio</a>
