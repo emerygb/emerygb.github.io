@@ -106,3 +106,33 @@ p { font-size:14px; line-height:1.75; }
 /* WORK UPDATE: keep the complete photo visible and stack link cards on narrow screens. */
 @media (max-width:800px) { .work-banner { width:calc(100% - 32px); } }
 @media (max-width:600px) { .work-links--three { grid-template-columns:1fr; } }
+
+/* WORK KEYWORDS UPDATE: centered blue keywords and blue dot separators above the pink links. */
+.work-keywords { display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:10px 14px; padding:28px 16px 2px; color:var(--blue); font-size:16px; font-weight:700; text-align:center; }
+.work-keyword-dot { color:var(--blue); font-size:21px; line-height:1; }
+
+/* WORK BUTTON ALIGNMENT UPDATE: make all three pink link panels uniform in one centered desktop row. */
+.work-links--three { grid-template-columns:repeat(3,minmax(0,185px)); justify-content:center; gap:22px; padding-top:14px; }
+.work-links--three .work-link-area { min-height:0; }
+.work-links--three .work-link-card { width:100%; min-width:0; min-height:154px; }
+
+/* MAIN PHOTO SIZE UPDATE: reduce the Home, Work, and About feature photographs only. */
+.home-hero { max-width:1200px; min-height:0; }
+.home-hero-image { height:400px; min-height:0; }
+.home-hero-copy { padding:30px clamp(20px,4vw,55px); }
+.work-banner { max-width:760px; }
+.work-banner img { max-height:460px; }
+.about-banner img { max-height:310px; }
+
+/* MAIN PHOTO SIZE UPDATE: retain sensible dimensions on phones, with intact interest-photo sizing. */
+@media (max-width:600px) {
+    .work-links--three { grid-template-columns:repeat(3,minmax(0,1fr)); gap:7px; padding-left:12px; padding-right:12px; }
+    .work-links--three .work-link-card { min-height:133px; padding:9px 5px; }
+    .work-links--three .work-link-card h3 { font-size:13px; margin-bottom:12px; }
+    .work-links--three .work-link-card .button { min-width:0; width:100%; padding:8px 4px; font-size:11px; }
+    .work-keywords { font-size:13px; gap:6px 8px; }
+    .work-keyword-dot { font-size:17px; }
+    .home-hero-image { height:255px; min-height:0; }
+    .work-banner img { max-height:360px; }
+    .about-banner img { max-height:280px; }
+}
