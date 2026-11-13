@@ -70,3 +70,39 @@ p { font-size:14px; line-height:1.75; }
 /* Responsive adjustments retain the same visual identity on narrow screens. */
 @media(max-width:800px) { .site-header{min-height:148px;padding-bottom:28px;} .home-hero { width:calc(100% - 32px); grid-template-columns:1fr; } .home-hero-image { min-height:310px; } .home-hero-copy { padding:45px 24px; } .work-links {padding:15px 12px 0;} .education { grid-template-columns:1fr; } .section { padding:55px 20px; } .work-detail { grid-template-columns:1fr; gap:8px; } .page-banner { height:230px; } }
 @media(max-width:480px) { .site-nav {gap:14px;} .home-hero-image {min-height:260px;} .home-hero-copy h1 { font-size:46px; } .quick-links {gap:12px;} .button { min-height:48px; } .work-links {grid-template-columns:1fr;} .work-link-area {min-height:130px;} .work-link-card {min-height:110px;} .hobby {grid-template-columns:125px 1fr; min-height:180px;} .hobby-photo{width:125px;min-height:180px;} .hobby-copy{padding:15px;} .hobby-copy p{font-size:11px;} }
+
+/* ABOUT SIZE FIX: keep the complete group photo visible, but limit its on-screen size. */
+.about-banner { width:calc(100% - 32px); max-width:650px; margin:0 auto; text-align:center; }
+.about-banner img { display:block; width:auto; max-width:100%; height:auto; max-height:380px; margin:0 auto; }
+/* ABOUT SIZE FIX: compact alternating photo-and-text rows, with readable text beside each photo. */
+.interests-section { padding-top:18px; }
+.interests { width:min(790px,100%); margin:0 auto; display:grid; gap:0; }
+.interest { display:grid; grid-template-columns:minmax(0,280px) minmax(0,1fr); gap:clamp(24px,3.6vw,42px); align-items:center; padding:20px 0 40px; }
+.interest + .interest { border-top:1px solid var(--line); padding-top:40px; }
+.interest:nth-child(even) .interest-photo { order:2; }
+.interest-photo { display:flex; align-items:center; justify-content:center; min-width:0; }
+/* ABOUT SIZE FIX: cap hobby photos at 280 by 225 pixels without cropping them. */
+.interest-photo img { display:block; max-width:min(100%,280px); width:auto; height:auto; max-height:225px; object-fit:contain; }
+.interest-copy { max-width:430px; }
+.interest-copy h3 { font-size:25px; margin-bottom:18px; }
+.interest-copy p { font-size:14px; line-height:1.85; color:#4f5190; margin-bottom:0; }
+/* ABOUT UPDATE: stack photos above text at mobile sizes without alternating visual order. */
+@media (max-width:700px) {
+    .about-banner { width:calc(100% - 32px); }
+    .interests-section { padding-top:8px; }
+    .interest, .interest + .interest { grid-template-columns:1fr; gap:22px; padding:36px 0 48px; }
+    .interest:nth-child(even) .interest-photo { order:0; }
+    /* ABOUT SIZE FIX: preserve the smaller image size on mobile too. */
+    .interest-photo img { max-height:225px; }
+    .interest-copy { max-width:100%; }
+    .interest-copy h3 { font-size:22px; margin-bottom:12px; }
+}
+
+/* WORK UPDATE: show the complete portrait-oriented poster photo without cropping; limit its display height. */
+.work-banner { width:calc(100% - 72px); max-width:980px; margin:0 auto; display:flex; justify-content:center; }
+.work-banner img { display:block; width:auto; max-width:100%; height:auto; max-height:720px; object-fit:contain; }
+/* WORK UPDATE: UCL Profile, ORCID and CV cards share one row on desktop. */
+.work-links--three { grid-template-columns:repeat(3,minmax(0,1fr)); }
+/* WORK UPDATE: keep the complete photo visible and stack link cards on narrow screens. */
+@media (max-width:800px) { .work-banner { width:calc(100% - 32px); } }
+@media (max-width:600px) { .work-links--three { grid-template-columns:1fr; } }
