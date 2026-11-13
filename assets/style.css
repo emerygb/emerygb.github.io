@@ -171,3 +171,29 @@ p { font-size:14px; line-height:1.75; }
     .work-hero-side .work-link-card h3 { font-size:13px; margin-bottom:12px; }
     .work-hero-side .work-link-card .button { min-width:0; width:100%; padding:8px 4px; font-size:11px; }
 }
+
+/* ABOUT PINK DETAILS: use short pale-pink title rules and understated pink interest separators. */
+.about-intro h2::after,
+.interests-section .section-title::after {
+    content:"";
+    display:block;
+    width:54px;
+    height:5px;
+    background:var(--pink);
+    margin:16px auto 0;
+}
+.interest + .interest { border-top-color:#f0c7ca; }
+.interest-copy h3 { display:table; padding-bottom:6px; border-bottom:4px solid var(--pink); }
+
+/* CONTACT PINK DETAILS: match the Work page's pale-pink panels without changing button layout. */
+.contact-content h1::after {
+    content:"";
+    display:block;
+    width:54px;
+    height:5px;
+    background:var(--pink);
+    margin:20px auto 0;
+}
+.contact-links .button { background:var(--pink); }
+/* Preserve the existing blue hover contrast on the newly pink contact buttons. */
+.contact-links .button:hover { background:var(--blue); color:#fff; }
