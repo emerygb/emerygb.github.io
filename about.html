@@ -23,21 +23,44 @@
     </nav>
 </header>
 <main>
-<!-- Fixed: render the supplied About photograph with the requested alt text. -->
-<div class="page-banner photo-slot"><img src="assets/about.jpg" alt="my friends in London"></div>
+<!-- About photo: preserve the full original image and its aspect ratio, with no banner cropping. -->
+<figure class="about-banner"><img src="assets/about.jpg" alt="my friends in London"></figure>
 <section class="section about-intro">
     <h2>About Me</h2>
     <p>I'm an exoplanet PhD researcher, but science isn't the only thing that keeps me busy. Outside research, I enjoy running, playing ultimate frisbee, spending time with horses, writing and reading.</p>
 </section>
-<section class="section" style="padding-top:8px">
-    <h2 class="section-title">Non-Science Pursuits</h2>
-    <div class="hobby-list">
-        <!-- Fixed: each hobby now displays its supplied photo; alt text preserves the original descriptions. -->
-        <article class="hobby"><div class="hobby-photo photo-slot"><img src="assets/running.jpg" alt="after finishing the Royal Parks Half Marathon"></div><div class="hobby-copy"><h3>Running</h3><p>Running has become one of my favourite ways to challenge myself, spend time outdoors, and see how far I've come. I've enjoyed training for longer-distance races and keeping up the habit alongside my research.</p></div></article>
-        <article class="hobby"><div class="hobby-photo photo-slot"><img src="assets/frisbee.jpg" alt="my london ultimate frisbee team"></div><div class="hobby-copy"><h3>Frisbee</h3><p>I started playing ultimate frisbee at UCLA, and it's continued to be a wonderful way to meet people, build a community, and stay active, especially when I've moved to new cities.</p></div></article>
-        <!-- Fixed: Horses and Literature use the same standard paragraph styling as the other hobbies. -->
-        <article class="hobby"><div class="hobby-photo photo-slot"><img src="assets/horses.jpg" alt="me and my horse Chesterlander"></div><div class="hobby-copy"><h3>Horses</h3><p>I grew up riding horses, and competed when I was in school. Though I don't ride regularly now, I stil love to spend time with horses and all animals when I have the chance. </p></div></article>
-        <article class="hobby"><div class="hobby-photo photo-slot"><img src="assets/writing.jpg" alt="a photo from my book club"></div><div class="hobby-copy"><h3>Literature</h3><p> I love reading, and have started a book club among my friends. I also like to write short fiction when I have the time.</p></div></article>
+<!-- About interests: larger editorial image-and-text features, alternating left/right rather than small bordered cards. -->
+<section class="section interests-section">
+    <h2 class="section-title">Other Interests</h2>
+    <div class="interests">
+        <article class="interest">
+            <div class="interest-photo"><img src="assets/running.jpg" alt="after finishing the Royal Parks Half Marathon" loading="lazy"></div>
+            <div class="interest-copy">
+                <h3>Running</h3>
+                <p>Running has become one of my favourite ways to challenge myself, spend time outdoors, and see how far I've come. I've enjoyed training for longer-distance races and keeping up the habit alongside my research.</p>
+            </div>
+        </article>
+        <article class="interest">
+            <div class="interest-photo"><img src="assets/frisbee.jpg" alt="my london ultimate frisbee team" loading="lazy"></div>
+            <div class="interest-copy">
+                <h3>Frisbee</h3>
+                <p>I started playing ultimate frisbee at UCLA, and it's continued to be a wonderful way to meet people, build a community, and stay active, especially when I've moved to new cities.</p>
+            </div>
+        </article>
+        <article class="interest">
+            <div class="interest-photo"><img src="assets/horses.jpg" alt="me and my horse Chesterlander" loading="lazy"></div>
+            <div class="interest-copy">
+                <h3>Horses</h3>
+                <p>I grew up riding horses, and competed when I was in school. Though I don't ride regularly now, I stil love to spend time with horses and all animals when I have the chance. </p>
+            </div>
+        </article>
+        <article class="interest">
+            <div class="interest-photo"><img src="assets/writing.jpg" alt="a photo from my book club" loading="lazy"></div>
+            <div class="interest-copy">
+                <h3>Literature</h3>
+                <p> I love reading, and have started a book club among my friends. I also like to write short fiction when I have the time.</p>
+            </div>
+        </article>
     </div>
 </section>
 </main>
